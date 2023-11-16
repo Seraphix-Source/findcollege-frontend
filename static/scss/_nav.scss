@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+
+    max-width: 90%;
+    margin: 0 16px;
+    max-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    // border-bottom:1px solid #FF8210;
+    position: relative;
+
+    img {
+        width: 100px;
+        object-fit: contain;
+        position: relative;
+        bottom: -15px;
+    }
+
+    .mobile-menu {
+        font-size: 16px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 15px;
+        color: white;
+        background-color: #FF6B00;
+        svg {
+            fill: white;
+        }
+    }
+
+    .web-view {
+        display: none;
+    }
+
+    @media screen and (min-width:576px) {
+        max-width: 512px;
+    }
+
+    @media screen and (min-width:768px) {
+        max-width: 640px;
+    }
+
+    @media screen and (min-width:1024px) {
+        max-width: 896px;
+        
+        .mobile-menu {
+            display: none !important;
+        }
+
+        .web-view {
+            display: flex;
+            justify-content: space-between;
+            gap:40px;
+            a{
+                font-weight: 700;
+                font-family: "Poppins";
+            }
+        }
+    }
+
+    @media screen and (min-width:1280px) {
+        max-width: 1080px;
+    }
+
+}

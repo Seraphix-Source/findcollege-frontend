@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+footer{
+    .footer_items{
+        .about{
+            img{
+                width: 100px;
+                object-fit: contain;
+            }
+        }
+        
+    }
+   .rights{
+        background-color:#FF6B00;
+        height:44px ;
+   }
+}

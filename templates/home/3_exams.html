@@ -1,0 +1,56 @@
+<!-- 
+
+    183.83.231.71
+
+    no need of heading or body
+
+"static/exam_logo.png" -->
+<!-- exam_section.scss write scss there -->
+<link rel="stylesheet" href="/static/css/exam_section.css">
+<link rel="stylesheet" href="/static/css/exam_section.css.map">
+<!-- use serde::Serialize; -->
+<section id="exam-section">
+    <h2>Popular exams</h2>
+    <p></p>
+    <p>
+        Choosing the right college is vital for your future career,
+        and the **FindCollege**.
+    </p>
+
+    <!-- <div class="exam-cards">
+            <div class="exam-type">
+                <div class="headings">
+                    <p class="header-eng">Engineering</p>
+                    <p class="jee-heading">JEE Mains</p>
+                </div>
+                <div ><img src="/static/images/exam_logo.png" alt="sss"></div>
+            </div>
+            <div >
+                <p >Exam Date : 20 Dec 2023</p>
+                <a href="">Process your application</a> 
+            </div>
+    </div> -->
+
+
+</section>
+
+<!-- Demo (use) -->
+<section id="cards">
+    {% for exams_card in exams_cards  %}
+    <div class="exam-cards">
+        <div  class="exam-type">
+            <div class="headings">
+                <p class="header-eng">{{ exams_card.stream }}</p>
+                <h4  class="jee-heading"> {{ exams_card.title }}</h4>
+            </div>
+            <div class="img-container"> <!-- img container-->
+                <img src="{{ exams_card.logo_path }}" alt="{{ exams_card.title }}">
+            </div>
+        </div>
+        <div class="date-application">
+            <p class="exam-date">{{ exams_card.date }}</p>
+            <a href="?exam-apply={{exams_card.id}}">Process your application</a>
+        </div>
+    </div>
+    {% endfor %}
+</section>
