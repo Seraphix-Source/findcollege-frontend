@@ -4,6 +4,7 @@ use tera::{ Tera };
 mod pages;
 
 
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
  
@@ -18,9 +19,11 @@ async fn main() -> std::io::Result<()> {
                 .use_last_modified(true),
         )
         .service(pages::index)
+        .service(pages::hero)
      })
 
-        .bind(("127.0.0.1", 8000))?
-        // .bind(("0.0.0.0", 8000))?
+        // .bind(("127.0.0.1", 8000))?
+        .bind(("0.0.0.0", 8000))?
+        // .bind("[::1]:9000")?
         .run().await;
 }

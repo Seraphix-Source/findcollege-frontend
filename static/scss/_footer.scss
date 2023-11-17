@@ -3,17 +3,49 @@
     margin: 0;
 }
 footer{
+    // margin-top: ;
+    position:relative;
+    bottom:0;
+    display:block;
+    width:100%;
     .footer_items{
+        display:flex;
+        justify-content:space-between;
+        max-width: 80%;
+        margin: 80px 80px 50px;
         .about{
             img{
-                width: 100px;
+                width: 180px;
                 object-fit: contain;
             }
+            .about_items{
+                margin-top:10px;
+            }
         }
-        
+        .universities{
+            hr{
+                margin-bottom: 14px;
+            }
+        }
+        .colleges{
+            hr{
+                margin-bottom: 12px;
+            }
+        }
+        .exams{
+            hr{
+                margin-bottom: 12px;
+            }
+        }
     }
    .rights{
         background-color:#FF6B00;
-        height:44px ;
+        height:40px ;
+        display:flex;
+        align-items:center;
+        color: #404040;
+        
    }
+   
+   
 }

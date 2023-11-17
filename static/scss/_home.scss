@@ -1,0 +1,49 @@
+.hero{
+    max-width: 90%;
+    margin-inline: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .hero-logo{
+        width: 200px;
+    }
+    .input-box{
+        margin-top: 10px;
+        height: 48px;
+        display: flex;
+        border:1px solid #999999;
+        border-radius: 2px;
+        input{
+            width: 86%;
+            border: none;
+            outline: none;
+        }
+        button{
+            margin: 3px;
+            border-radius: 2px;
+            width: 14%;
+            background-color: #FF6B00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+                fill:#fff;
+            }
+        }
+    }
+    .contact-btn{
+        padding:0 20px;
+        height:40px;
+        margin-top: 10px;
+        background-color: #fff;
+        border:2px solid #FF6B00;
+        border-radius: 6px;
+        color:#FF6B00;
+        font-weight: 600;
+    }
+
+}
+
+.hero-logo2{
+    width: 320px;
+}

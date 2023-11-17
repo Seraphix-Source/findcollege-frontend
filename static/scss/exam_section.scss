@@ -1,7 +1,46 @@
-// here
+// Yooo haripriya this your ipaddress
+// http://10.116.106.156:8000/
+
+#popular-exam{
+    border: 1px solid #FF6B00;
+    border-left: none;
+    border-right: none;
+    height: 200px;
+    margin-bottom: 0.5rem;
+#exam-section{
+    width:510px;
+    height:100px;
+   .btn-headings{
+    display:flex;
+    justify-content:space-between;
+    h2{
+        font-weight: 700;
+        font-size: 32px;
+    }
+    
+    .apply-btn{
+        border:1px solid #FF6B00;
+        font-weight:700;
+        color:#FF6B00; 
+        width:170px;
+        height:40px;
+        border-radius: 8px;
+        display: grid;
+        place-content: center;
+    }
+   }
+    .sentence-1{
+        font-size: 16px;
+        margin-top: 29px;
+       
+    }
+}
+
 #cards{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin:35px 0;
+    
     .exam-cards{
         //background-color: red;
         width:231px;
@@ -9,6 +48,7 @@
         padding:21px 16px;
         border: 1px solid rgba(255, 107, 0, 1);
         border-radius: 5px;
+        background-color: #FFF;
         .exam-type{
             display:flex;
             justify-content: space-between;
@@ -18,6 +58,7 @@
                 height:48px;
                 width:48px;
                 object-fit: cover;
+                
                }
             }
            
@@ -50,4 +91,5 @@
         }
     }
    
+}
 }
