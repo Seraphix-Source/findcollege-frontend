@@ -125,3 +125,24 @@ button{
 // img{
 //     object-fit: cover;
 // }
+
+.margin{
+    // @media screen and (min-width:1280px){   //xxl
+    //     margin:0 64px ;
+    // }
+    // @media screen and (min-width: 1024px){  //xl
+    //     margin:0 64px;
+    // }
+    // @media screen and (min-width:768px){    //large
+    //     margin:0 64px;
+    // }
+    @media screen and (min-width:576px){    //medium
+        margin:  0 64px;
+    }
+    @media screen and (min-width: 320px) {   //small
+        margin:  0 32px;
+    } 
+    @media screen and (max-width: 320px) {   //extraSmall
+        margin: 0  16px;
+    } 
+}

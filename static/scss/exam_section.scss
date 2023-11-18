@@ -1,95 +1,137 @@
-// Yooo haripriya this your ipaddress
-// http://10.116.106.156:8000/
+@import '_resets.scss';
 
-#popular-exam{
+#popular-exam {
+    //background-color: red;
     border: 1px solid #FF6B00;
     border-left: none;
     border-right: none;
     height: 200px;
     margin-bottom: 0.5rem;
-#exam-section{
-    width:510px;
-    height:100px;
-   .btn-headings{
-    display:flex;
-    justify-content:space-between;
-    h2{
-        font-weight: 700;
-        font-size: 32px;
-    }
-    
-    .apply-btn{
-        border:1px solid #FF6B00;
-        font-weight:700;
-        color:#FF6B00; 
-        width:170px;
-        height:40px;
-        border-radius: 8px;
-        display: grid;
-        place-content: center;
-    }
-   }
-    .sentence-1{
-        font-size: 16px;
-        margin-top: 29px;
-       
-    }
-}
 
-#cards{
-    display: flex;
-    justify-content: space-between;
-    margin:35px 0;
-    
-    .exam-cards{
-        //background-color: red;
-        width:231px;
-        height:128px;
-        padding:21px 16px;
-        border: 1px solid rgba(255, 107, 0, 1);
-        border-radius: 5px;
-        background-color: #FFF;
-        .exam-type{
-            display:flex;
+
+    #exam-section {
+        width: 510px;
+        height: 100px;
+
+        @media screen and (max-width:576px) {
+
+            width: unset;
+            margin-inline: auto;
+
+        }
+
+        .btn-headings {
+            display: flex;
             justify-content: space-between;
 
-            .img-container{
-               img{
-                height:48px;
-                width:48px;
-                object-fit: cover;
-                
-               }
-            }
-           
+            @media screen and (max-width:576px) {
 
-            .header-eng {
-                width:80px;
-                border: 1px solid rgba(30, 30, 30, 1);
-                border-radius: 5px;
-                font-size: 10px;
-                color: rgba(30, 30, 30, 1);
+                margin-inline: auto !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 32px;
+            }
+
+            .apply-btn {
+                border: 1px solid #FF6B00;
+                font-weight: 700;
+                color: #FF6B00;
+                width: 170px;
+                height: 40px;
+                border-radius: 8px;
                 display: grid;
                 place-content: center;
             }
-            .jee-heading{
-                font-weight: 700;
-                font-size: 18px;
-                margin-top: 3px;
+        }
+
+        .sentence-1 {
+            font-size: 16px;
+            margin-top: 29px;
+
+            @media screen and (max-width:526px) {
+                display: none;
             }
         }
 
-        .date-application{
-            .exam-date{
-                font-size: 12px;
-                color:rgba(102, 102, 102, 1) ;
+
+
+    }
+
+    #cards {
+        display: flex;
+        justify-content: space-between;
+        margin: 35px 0;
+
+        .exam-cards {
+            //background-color: red;
+            width: 231px;
+            height: 128px;
+            padding: 21px 16px;
+            border: 1px solid rgba(255, 107, 0, 1);
+            border-radius: 5px;
+            background-color: #FFF;
+
+            @media screen and (max-width:576px) {
+               
+                display: none !important;
+                
+                &:nth-child(1) {
+                    align-items: center;
+                    display: block !important;
+                    background-color: rgba(255, 107, 0, 1) !important;
+                }
+
             }
-            a{
-                font-size:12px ;
-                text-decoration: underline;
+
+            .exam-type {
+                display: flex;
+                justify-content: space-between;
+
+                .img-container {
+                    img {
+                        height: 48px;
+                        width: 48px;
+                        object-fit: cover;
+
+                    }
+                }
+
+
+                .header-eng {
+                    width: 80px;
+                    border: 1px solid rgba(30, 30, 30, 1);
+                    border-radius: 5px;
+                    font-size: 10px;
+                    color: rgba(30, 30, 30, 1);
+                    display: grid;
+                    place-content: center;
+                }
+
+                .jee-heading {
+                    font-weight: 700;
+                    font-size: 18px;
+                    margin-top: 3px;
+                }
+            }
+
+            .date-application {
+                .exam-date {
+                    font-size: 12px;
+                    color: rgba(102, 102, 102, 1);
+                }
+
+                a {
+                    font-size: 12px;
+                    text-decoration: underline;
+                }
             }
         }
+
     }
-   
-}
 }

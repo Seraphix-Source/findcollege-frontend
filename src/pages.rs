@@ -75,6 +75,53 @@ pub async fn hero(tera: web::Data<Tera>) -> impl Responder {
     HttpResponse::Ok().body(rendered)
 }
 
+#[get("/exams/")]
+pub async fn exams(tera: web::Data<Tera>) -> impl Responder {
+    let mut context = Context::new();
+    context.insert("name", "Prince");
+    context.insert("title", "FindCollege");
+
+    //   // exams_cards array TODO: add more
+        let exams_cards = [
+            ExamCard {
+                id: 14,
+                title: String::from("JEE Main"),
+                logo_path: String::from("/static/images/exam_logo.png"),
+                date: String::from("14 Dec 2023"),
+                stream: String::from("Engineering"),
+            },
+            ExamCard {
+                id: 15,
+                title: String::from("NEET UG"),
+                logo_path: String::from("/static/images/exam_logo.png"),
+                date: String::from("2 Mar 2023"),
+                stream: String::from("Medical"),
+            },
+            ExamCard {
+                id: 15,
+                title: String::from("NEET UG"),
+                logo_path: String::from("/static/images/exam_logo.png"),
+                date: String::from("2 Mar 2023"),
+                stream: String::from("Medical"),
+            },
+            ExamCard {
+                id: 15,
+                title: String::from("NEET UG"),
+                logo_path: String::from("/static/images/exam_logo.png"),
+                date: String::from("2 Mar 2023"),
+                stream: String::from("Medical"),
+            },
+             // ...
+        ];
+    // context.insert()
+    context.insert("exams_cards", &exams_cards);
+
+
+
+
+    let rendered = tera.render("home/3_exams.html", &context).unwrap();
+    HttpResponse::Ok().body(rendered)
+}
 // #[get("/json")]
 // pub async fn hash_context(tera: web::Data<Tera>) -> impl Responder {
 //     let mut context = Context::new();

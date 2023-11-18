@@ -3,7 +3,6 @@
     margin: 0;
 }
 footer{
-    // margin-top: ;
     position:relative;
     bottom:0;
     display:block;
@@ -11,8 +10,20 @@ footer{
     .footer_items{
         display:flex;
         justify-content:space-between;
-        max-width: 80%;
-        margin: 80px 80px 50px;
+        // max-width: 80%;
+        // margin: 80px 80px 50px;
+        @media screen and (min-width:768px){
+            max-width:100%;
+            margin:80px 20px 20px 20px;
+        }
+        @media screen and (min-width:1024px){
+            max-width:80%;
+            margin:80px 20px 50px 100px;  
+        } 
+        @media screen and (min-width:1535px){
+            max-width:60%;
+            margin:150px 100px 60px 240px;
+        }
         .about{
             img{
                 width: 180px;
@@ -20,11 +31,20 @@ footer{
             }
             .about_items{
                 margin-top:10px;
+                div{
+                    gap: 30px;
+                }
             }
         }
         .universities{
             hr{
                 margin-bottom: 14px;
+            }
+            @media screen and (min-width:768px){
+                 div.universities > div{
+                    font-size: 12px;
+                 }
+                
             }
         }
         .colleges{
@@ -44,6 +64,7 @@ footer{
         display:flex;
         align-items:center;
         color: #404040;
+        padding-left: 230px;
         
    }
    
